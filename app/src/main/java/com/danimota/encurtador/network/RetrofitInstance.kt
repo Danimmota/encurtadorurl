@@ -1,4 +1,4 @@
-package com.danimota.encurtador.data.remote
+package com.danimota.encurtador.network
 
 import com.danimota.encurtador.data.remote.service.ApiService
 import retrofit2.Retrofit
