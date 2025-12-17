@@ -70,9 +70,8 @@
 
 ---
  ## 📱 8. Screenshots do App
- - [Tela Principal](docs/images/home.png)
- - [Histórico de URLs](docs/images/history.png)
- - [Detalhes da URL](docs/images/details.png)
+ - [Tela Principal](docs/images/homeEncurtador.png)
+ - [Histórico de URLs e detalhes](docs/images/historyandDetails.png)
    
  ---
  ## 9. Autore
