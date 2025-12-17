@@ -40,7 +40,6 @@ fun AppContent() {
 }
 
 
-// Preview para a tela completa, facilitando o desenvolvimento
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {

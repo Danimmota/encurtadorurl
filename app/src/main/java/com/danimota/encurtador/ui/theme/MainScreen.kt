@@ -58,13 +58,12 @@ fun MainScreen() {
     val linkDao = remember { DatabaseProvider.getInstance(context).linkDAO() }
     val recentLinks by linkDao.getAllLinks().collectAsState(initial = emptyList())
 
-    // A Column principal que organiza toda a tela
+    // Column principal que organiza toda a tela
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // Chamando os componentes filhos.
-        // O estado e os eventos são passados como parâmetros.
+
         HeaderComponent()
 
         UrlInputWithActions(
@@ -149,11 +148,11 @@ private fun HeaderComponent() {
 
 @Composable
 private fun UrlInputWithActions(
-    // Parâmetros para receber o estado
+
     urlValue: String,
     isLoading: Boolean,
     isCopyEnabled: Boolean,
-    // Lambdas para notificar o pai sobre eventos
+
     onUrlChange: (String) -> Unit,
     onShortenClick: () -> Unit,
     onCopyClick: () -> Unit
@@ -171,12 +170,12 @@ private fun UrlInputWithActions(
 
         TextField(
             value = urlValue,
-            onValueChange = onUrlChange, // Chama o lambda passado pelo pai
+            onValueChange = onUrlChange,
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(vertical = 8.dp),
             placeholder = { Text("Digite a URL aqui") },
-            // ... (suas cores)
+
         )
 
         Button(
@@ -197,7 +196,7 @@ private fun UrlInputWithActions(
         }
 
         Button(
-            // Mostra o botão de copiar apenas se houver uma URL encurtada
+
             enabled = isCopyEnabled,
             onClick = onCopyClick,
             modifier = Modifier
@@ -229,12 +228,10 @@ private fun ShortenedUrlsList(recentLinks: List<LinkEntity>) {
             modifier = Modifier.padding(bottom = 8.dp)
         )
 
-        // LazyColumn é a versão do Compose para RecyclerView.
-        // É otimizada para listas longas, pois só renderiza os itens visíveis na tela.
         LazyColumn(
-            verticalArrangement = Arrangement.spacedBy(8.dp) // Espaçamento entre os itens
+            verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            // A função 'items' é a forma idiomática de construir a lista a partir de uma coleção.
+
             items(recentLinks) { url -> UrlItem(linkEntity = url) }
         }
     }
@@ -242,7 +239,7 @@ private fun ShortenedUrlsList(recentLinks: List<LinkEntity>) {
 
 @Composable
 private fun UrlItem(linkEntity: LinkEntity) {
-    // Card dá um bom destaque visual para cada item da lista.
+
     Card(
         modifier = Modifier.fillMaxWidth(),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
