@@ -11,13 +11,13 @@
  - Histórico de URLs encurtadas.
  - Interface amigável e responsiva com Material Design.
  - Persistencia local utilizando Room Database.
- - Arquitetura organizada seguindo boas práticas (MVVM) garantindo separação de responsabilidades e facilidade de manutenção
+ - Arquitetura organizada seguindo boas práticas, afim de garantir separação de responsabilidades e facilidade de manutenção..
  
  ---
  
  ## 🛠️ 2. Tecnologias Utilizadas
  - **Kotlin**
- - **Android Jetpack** (Navigation, ViewModel, LiveData)
+ - **Android Jetpack** 
  - **Material Design**
  - **Retrofit** para chamadas de API
  - **Room Database** para persistência local
@@ -51,7 +51,6 @@
 - `data/` - Camada de dados, incluindo modelo, DAO e repositório.
 - `ui/` - Componentes de interface do usuário.
 - `network/` - Configuração da API Retrofit e serviços de rede.
-- `viewmodel/` - ViewModels para gerenciar dados da UI.
 
  ---
 
