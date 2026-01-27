@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "links")
-class LinkEntity (
+data class LinkEntity (
 
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,

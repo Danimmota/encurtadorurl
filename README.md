@@ -73,5 +73,5 @@
  - [Histórico de URLs e detalhes](docs/images/historyandDetails.png)
    
  ---
- ## 9. Autore
+ ## 9. Autor
  - **Daniela Mota** - Estudante de Análise e Desenvolvimento de Sistemas.

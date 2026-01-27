@@ -11,39 +11,42 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.danimota.encurtador.feature.login.screen.LoginScreen
 import com.danimota.encurtador.ui.theme.EncurtadorTheme
 import com.danimota.encurtador.ui.theme.MainScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        super.onCreate(savedInstanceState)
+
         setContent {
             EncurtadorTheme {
-                AppContent()
+                LoginScreen()
+
             }
         }
     }
 }
 
-@Composable
-fun AppContent() {
-    Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(innerPadding)
-        ) {
-            MainScreen()
-        }
-    }
-}
+//@Composable
+//fun AppContent() {
+//    Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+//        Column(
+//            modifier = Modifier
+//                .fillMaxSize()
+//                .padding(innerPadding)
+//        ) {
+//            LoginScreen()
+//        }
+//    }
+//}
 
 
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    EncurtadorTheme {
-        AppContent()
-    }
-}
+//@Preview
+//@Composable
+//fun DefaultPreview() {
+//    EncurtadorTheme {
+//        AppContent()
+//    }
+//}
