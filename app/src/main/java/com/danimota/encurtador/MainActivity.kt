@@ -4,16 +4,12 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.danimota.encurtador.feature.login.screen.LoginScreen
-import com.danimota.encurtador.ui.theme.EncurtadorTheme
-import com.danimota.encurtador.ui.theme.MainScreen
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.danimota.encurtador.feature.ScreenRoute
+import com.danimota.encurtador.feature.home.HomeScreen
+import com.danimota.encurtador.feature.login.LoginScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,32 +17,26 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            EncurtadorTheme {
-                LoginScreen()
+            val navController = rememberNavController()
 
+            NavHost(
+                navController = navController,
+                startDestination = ScreenRoute.Login.route
+            ){
+                composable(ScreenRoute.Login.route) {
+                    LoginScreen(
+                        navController = navController
+                    )
+                }
+
+                composable(ScreenRoute.Home.route) {
+                    HomeScreen()
+                }
             }
+//            EncurtadorTheme {
+//                LoginScreen()
+//
+//            }
         }
     }
 }
-
-//@Composable
-//fun AppContent() {
-//    Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-//        Column(
-//            modifier = Modifier
-//                .fillMaxSize()
-//                .padding(innerPadding)
-//        ) {
-//            LoginScreen()
-//        }
-//    }
-//}
-
-
-//@Preview
-//@Composable
-//fun DefaultPreview() {
-//    EncurtadorTheme {
-//        AppContent()
-//    }
-//}

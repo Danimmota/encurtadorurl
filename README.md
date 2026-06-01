@@ -49,7 +49,7 @@
  ## 📚 5. Estrutura do Projeto
 
 - `data/` - Camada de dados, incluindo modelo, DAO e repositório.
-- `ui/` - Componentes de interface do usuário.
+- `feature/` - Camada de apresentação, contendo as telas e componentes de UI.
 - `network/` - Configuração da API Retrofit e serviços de rede.
 
  ---
@@ -62,16 +62,22 @@
 
  ## 📦 7. Dependências
 - **Kotlin Standard Library**: Biblioteca padrão do Kotlin.
+- **Jetpack Compose**: Biblioteca para construção de interfaces de usuário declarativas.
 - **Retrofit**: Biblioteca para chamadas HTTP.
 - **Room**: Biblioteca para persistência local.
+- **Navigation Compose**: Biblioteca do Compose para navegação entre telas.
 - **Coroutines**: Suporte para programação assíncrona.
 - **Material Design Components**: Componentes de UI seguindo as diretrizes do Material Design.
 
 ---
- ## 📱 8. Screenshots do App
- - [Tela Principal](docs/images/homeEncurtador.png)
+## 📱 8. Tela de Login
+
+- [Tela de Login](docs/images/login_encurtador.png)
+
+## 🏠 9. Tela Principal com histórico de URLs encurtadas
+
  - [Histórico de URLs e detalhes](docs/images/historyandDetails.png)
    
  ---
- ## 9. Autor
- - **Daniela Mota** - Estudante de Análise e Desenvolvimento de Sistemas.
+ ## 10. Autor
+ - **Daniela Mota** - Desenvolvedora Backend & Mobile
